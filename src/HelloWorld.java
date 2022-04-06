@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
 
     // psvm
@@ -105,7 +107,21 @@ public class HelloWorld {
 //        System.out.println(maxPlusInt);
         // result: -2147483648
 
+//        String name = "codeup";
+//        System.out.printf("Hello there, %s. Nice to see you.%n", name);
 
+//        String greeting = "Salutations";
+//        String name = "codeup";
+//        System.out.printf("%s, %s!", greeting, name);
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter something: ");
+//        String userInput = scanner.next();
+        String userInput = scanner.nextLine();
+
+        System.out.println("You entered: --> \"" + userInput + "\" <--");
     }
+
 
 }
