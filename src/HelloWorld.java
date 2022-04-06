@@ -1,5 +1,6 @@
 public class HelloWorld {
 
+    // psvm
     public static void main(String[] args) {
         // sout
 //        System.out.println("Hello, World!");
@@ -56,6 +57,8 @@ public class HelloWorld {
 //        System.out.println(x);
 
         // one increments like a normal person, the other doesn't
+        // need to reference the variable again after post-increment to view
+        // current status
 
         // 11
 //        int class = 43545435;
@@ -98,8 +101,8 @@ public class HelloWorld {
 //        System.out.println(maxPlus);
         // error
 
-        int maxPlusInt = Integer.MAX_VALUE + 1;
-        System.out.println(maxPlusInt);
+//        int maxPlusInt = Integer.MAX_VALUE + 1;
+//        System.out.println(maxPlusInt);
         // result: -2147483648
 
 
