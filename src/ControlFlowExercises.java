@@ -1,10 +1,8 @@
-import java.util.Scanner;
-
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
         // 1a
         // Create an integer variable i with a value of 5.
@@ -13,6 +11,13 @@ public class ControlFlowExercises {
         // Create a while loop that runs so long as i is less than or equal to 15
         // Each loop iteration, output the current value of i, then increment i by one.
 //        while (i <= 15) {
+//            System.out.print(i + " ");
+//            i++;
+//        }
+        // REVIEW:
+//        int i = 5;
+//
+//        while(i <= 15) {
 //            System.out.print(i + " ");
 //            i++;
 //        }
@@ -26,7 +31,21 @@ public class ControlFlowExercises {
 //            i += 2;
 //        } while (i <= 100);
 
+        // REVIEW:
+//        int i = 0;
+//        do {
+//            System.out.println(i);
+//            i += 2;
+//        } while (i <= 100);
+
         // Alter your loop to count backwards by 5's from 100 to -10.
+//        int i = 100;
+//        do {
+//            System.out.println(i);
+//            i -= 5;
+//        } while (i >= -10);
+
+        // REVIEW:
 //        int i = 100;
 //        do {
 //            System.out.println(i);
@@ -41,11 +60,20 @@ public class ControlFlowExercises {
 //            i *= i;
 //        } while (i < 1000000);
 
+        // REVIEW:
+//        int i = 2;
+//        do {
+//            System.out.println(i);
+////            i *= i;
+//            i = (int) Math.pow(i, 2);
+//        } while (i < 1_000_000);
+
         // 1c
         // Refactor the previous two exercises to use a for loop instead.
 //        for (int i = 5; i <= 15; i++) {
 //            System.out.print(i + " ");
 //        }
+
 
 //        for (int i = 0; i <= 100; i += 2) {
 //            System.out.println(i);
@@ -59,6 +87,14 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
+        // REVIEW
+//        for (int i = 100; i >= -10; i -= 5) {
+//            System.out.println(i);
+//        }
+//
+//        for (long i = 2L; i < 1_000_000; i *= i) {
+//            System.out.println(i);
+//        }
         // 2 - Fizzbuzz
 //        for (int i = 1; i <= 100; i++) {
 //            if (i % 3 == 0 && i % 5 == 0) {
@@ -67,6 +103,19 @@ public class ControlFlowExercises {
 //                System.out.println(i + " Fizz");
 //            } else if (i % 5 == 0) {
 //                System.out.println(i + " Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
+
+        // REVIEW
+//        for (int i = 1; i <= 100; i++) {
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (i % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if (i % 5 == 0) {
+//                System.out.println("Buzz");
 //            } else {
 //                System.out.println(i);
 //            }
@@ -112,39 +161,51 @@ public class ControlFlowExercises {
 //            }
 //        } while (userContinue);
 
+        // REVIEW:
+//        System.out.println("Enter an integer: ");
+//        int userInt = scanner.nextInt();
+//
+//        System.out.println("Here is your table:");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//
+//        for (int i = 1; i <= userInt; i++) {
+//            System.out.printf("%-6d | %-7d | %-6d %n", i, i * i, i * i * i);
+//        }
+
 
         // 4 - Convert given number grades into letter grades.
-        String letterGrade;
-        boolean userGradeContinue;
-        char userGradeContinueInput;
+//        String letterGrade;
+//        boolean userGradeContinue;
+//        char userGradeContinueInput;
+//
+//        do {
+//            System.out.print("Enter a numerical grade from 0 - 100: ");
+//            byte userGrade = scanner.nextByte();
+//
+//            if (userGrade >= 88) {
+//                letterGrade = "A";
+//            } else if (userGrade >= 80) {
+//                letterGrade = "B";
+//            } else if (userGrade >= 67) {
+//                letterGrade = "C";
+//            } else if (userGrade >= 60) {
+//                letterGrade = "D";
+//            } else {
+//                letterGrade = "F";
+//            }
+//
+//            System.out.printf("Letter grade is %s %n", letterGrade);
+//
+//            System.out.println("Enter another grade?  y / n");
+//            userGradeContinueInput = scanner.next().charAt(0);
+//
+//            if (userGradeContinueInput == 'y') {
+//                userGradeContinue = true;
+//            } else {
+//                userGradeContinue = false;
+//            }
+//        } while (userGradeContinue);
 
-        do {
-            System.out.print("Enter a numerical grade from 0 - 100: ");
-            byte userGrade = scanner.nextByte();
-
-            if (userGrade >= 88) {
-                letterGrade = "A";
-            } else if (userGrade >= 80) {
-                letterGrade = "B";
-            } else if (userGrade >= 67) {
-                letterGrade = "C";
-            } else if (userGrade >= 60) {
-                letterGrade = "D";
-            } else {
-                letterGrade = "F";
-            }
-
-            System.out.printf("Letter grade is %s %n", letterGrade);
-
-            System.out.println("Enter another grade?  y / n");
-            userGradeContinueInput = scanner.next().charAt(0);
-
-            if (userGradeContinueInput == 'y') {
-                userGradeContinue = true;
-            } else {
-                userGradeContinue = false;
-            }
-        } while (userGradeContinue);
-
-    } // end main
+    }
 }
