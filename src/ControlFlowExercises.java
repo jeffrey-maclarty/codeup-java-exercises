@@ -4,6 +4,8 @@ public class ControlFlowExercises {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
         // 1a
         // Create an integer variable i with a value of 5.
 //        int i = 5;
@@ -58,17 +60,17 @@ public class ControlFlowExercises {
 //        }
 
         // 2 - Fizzbuzz
-//        for (int i = 1; i <= 100; i++) {
-//            if (i % 3 == 0 && i % 5 == 0) {
-//                System.out.println(i + " FizzBuzz");
-//            } else if (i % 3 == 0) {
-//                System.out.println(i + " Fizz");
-//            } else if (i % 5 == 0) {
-//                System.out.println(i + " Buzz");
-//            } else {
-//                System.out.println(i);
-//            }
-//        }
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i + " FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println(i + " Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println(i + " Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
 
         // 3 - Display a table of powers.
         // Prompt the user to enter an integer.
@@ -76,23 +78,71 @@ public class ControlFlowExercises {
         // Ask if the user wants to continue.
         // Assume that the user will enter valid data.
         // Only continue if the user agrees to.
+        boolean userContinue;
+        char userContinueInput;
 
-        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.print("What number would like to go up to? ");
+            int userInt = scanner.nextInt();
 
-        System.out.print("What number would like to go up to? ");
-        int userInt = scanner.nextInt();
+            System.out.println("");
+            System.out.println("Here is your table!");
+            System.out.println("");
+            String tableAlignment = "| %-8s | %-9s | %-7s |%n";
+            System.out.println("| number   | squared   | cubed   |");
+            System.out.println("| -------- | --------- | ------- |");
 
-        System.out.println("");
-        System.out.println("Here is your table!");
-        System.out.println("");
-        String tableAlignment = "| %-8s | %-9s | %-7s |%n";
-        System.out.println("| number   | squared   | cubed   |");
-        System.out.println("| -------- | --------- | ------- |");
-        for (int i = 1; i <= userInt; i++) {
-            int squared = i * i;
-            int cubed = i * i * i;
-            System.out.printf(tableAlignment, i, squared, cubed);
-        }
+            for (int i = 1; i <= userInt; i++) {
+                int squared = i * i;
+                int cubed = i * i * i;
+                System.out.printf(tableAlignment, i, squared, cubed);
+            }
+
+            System.out.println("");
+            System.out.println("Enter another number?  y / n");
+            userContinueInput = scanner.next().charAt(0);
+            // https://stackoverflow.com/questions/23098790/how-can-i-enter-char-using-scanner-in-java
+
+            if (userContinueInput == 'y') {
+                userContinue = true;
+            } else {
+                userContinue = false;
+            }
+        } while (userContinue);
+
+
+        // 4 - Convert given number grades into letter grades.
+        String letterGrade;
+        boolean userGradeContinue;
+        char userGradeContinueInput;
+
+        do {
+            System.out.print("Enter a numerical grade from 0 - 100: ");
+            byte userGrade = scanner.nextByte();
+
+            if (userGrade >= 88) {
+                letterGrade = "A";
+            } else if (userGrade >= 80) {
+                letterGrade = "B";
+            } else if (userGrade >= 67) {
+                letterGrade = "C";
+            } else if (userGrade >= 60) {
+                letterGrade = "D";
+            } else {
+                letterGrade = "F";
+            }
+
+            System.out.printf("Letter grade is %s %n", letterGrade);
+
+            System.out.println("Enter another grade?  y / n");
+            userGradeContinueInput = scanner.next().charAt(0);
+
+            if (userGradeContinueInput == 'y') {
+                userGradeContinue = true;
+            } else {
+                userGradeContinue = false;
+            }
+        } while (userGradeContinue);
 
     } // end main
 }
