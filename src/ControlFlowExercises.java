@@ -82,6 +82,7 @@ public class ControlFlowExercises {
         System.out.print("What number would like to go up to? ");
         int userInt = scanner.nextInt();
 
+        System.out.println("");
         System.out.println("Here is your table!");
         System.out.println("");
         String tableAlignment = "| %-8s | %-9s | %-7s |%n";
