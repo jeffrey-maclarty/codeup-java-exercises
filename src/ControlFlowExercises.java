@@ -60,17 +60,17 @@ public class ControlFlowExercises {
 //        }
 
         // 2 - Fizzbuzz
-        for (int i = 1; i <= 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println(i + " FizzBuzz");
-            } else if (i % 3 == 0) {
-                System.out.println(i + " Fizz");
-            } else if (i % 5 == 0) {
-                System.out.println(i + " Buzz");
-            } else {
-                System.out.println(i);
-            }
-        }
+//        for (int i = 1; i <= 100; i++) {
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println(i + " FizzBuzz");
+//            } else if (i % 3 == 0) {
+//                System.out.println(i + " Fizz");
+//            } else if (i % 5 == 0) {
+//                System.out.println(i + " Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
 
         // 3 - Display a table of powers.
         // Prompt the user to enter an integer.
@@ -78,37 +78,37 @@ public class ControlFlowExercises {
         // Ask if the user wants to continue.
         // Assume that the user will enter valid data.
         // Only continue if the user agrees to.
-        boolean userContinue;
-        char userContinueInput;
-
-        do {
-            System.out.print("What number would like to go up to? ");
-            int userInt = scanner.nextInt();
-
-            System.out.println("");
-            System.out.println("Here is your table!");
-            System.out.println("");
-            String tableAlignment = "| %-8s | %-9s | %-7s |%n";
-            System.out.println("| number   | squared   | cubed   |");
-            System.out.println("| -------- | --------- | ------- |");
-
-            for (int i = 1; i <= userInt; i++) {
-                int squared = i * i;
-                int cubed = i * i * i;
-                System.out.printf(tableAlignment, i, squared, cubed);
-            }
-
-            System.out.println("");
-            System.out.println("Enter another number?  y / n");
-            userContinueInput = scanner.next().charAt(0);
-            // https://stackoverflow.com/questions/23098790/how-can-i-enter-char-using-scanner-in-java
-
-            if (userContinueInput == 'y') {
-                userContinue = true;
-            } else {
-                userContinue = false;
-            }
-        } while (userContinue);
+//        boolean userContinue;
+//        char userContinueInput;
+//
+//        do {
+//            System.out.print("What number would like to go up to? ");
+//            int userInt = scanner.nextInt();
+//
+//            System.out.println("");
+//            System.out.println("Here is your table!");
+//            System.out.println("");
+//            String tableAlignment = "| %-8s | %-9s | %-7s |%n";
+//            System.out.println("| number   | squared   | cubed   |");
+//            System.out.println("| -------- | --------- | ------- |");
+//
+//            for (int i = 1; i <= userInt; i++) {
+//                int squared = i * i;
+//                int cubed = i * i * i;
+//                System.out.printf(tableAlignment, i, squared, cubed);
+//            }
+//
+//            System.out.println("");
+//            System.out.println("Enter another number?  y / n");
+//            userContinueInput = scanner.next().charAt(0);
+//            // https://stackoverflow.com/questions/23098790/how-can-i-enter-char-using-scanner-in-java
+//
+//            if (userContinueInput == 'y') {
+//                userContinue = true;
+//            } else {
+//                userContinue = false;
+//            }
+//        } while (userContinue);
 
 
         // 4 - Convert given number grades into letter grades.
