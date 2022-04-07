@@ -85,6 +85,8 @@ public class ControlFlowExercises {
 //            System.out.print("What number would like to go up to? ");
 //            int userInt = scanner.nextInt();
 //
+//            byte strLength = -8;
+//
 //            System.out.println("");
 //            System.out.println("Here is your table!");
 //            System.out.println("");
