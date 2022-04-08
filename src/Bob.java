@@ -4,11 +4,17 @@ public class Bob {
 
     public static void main(String[] args) {
 
+        converse(getInput());
+
+    } // end main
+
+    public static String getInput () {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Say something to Bob:");
-        String userStatement = scanner.nextLine();
+        return scanner.nextLine();
+    }
 
+    public static void converse(String userStatement) {
         if (userStatement.endsWith("?")) {
             System.out.println("Bob responds 'Sure.'");
         } else if (userStatement.endsWith("!")) {
@@ -18,6 +24,5 @@ public class Bob {
         } else {
             System.out.println("Bob responds 'Whatever.'");
         }
-
-    } // end main
+    }
 }
