@@ -21,9 +21,9 @@ public class HighLow {
             } else {
                 System.out.println("Wrong! " + userGuess + " is too low, try a higher number.");
             }
+
             numberOfGuesses += 1;
             System.out.println("That was guess " + numberOfGuesses + " of 10 allowed.");
         }
-//        System.out.println(randomNumber);
     }
 }
