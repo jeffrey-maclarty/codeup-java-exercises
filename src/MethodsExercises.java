@@ -95,11 +95,11 @@ public class MethodsExercises {
         if (rollYesNo == 'n') {
             System.out.println("Game Over");
         } else {
-            do {
+            while (rolls < 3) {
                 int rolling = (int) ((Math.random() * (sides - 1)) + 1);
                 System.out.println("die " + rolls + ": " + rolling);
-                rolls = rolls + 1;
-            } while (rolls < 3);
+                rolls += 1;
+            }
         }
 
         System.out.println("Roll again? ");
