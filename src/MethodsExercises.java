@@ -89,7 +89,7 @@ public class MethodsExercises {
         int sides = scanner.nextInt();
         int rolls = 1;
 
-        System.out.print("Roll dice?  y / n - ");
+        System.out.println("Roll dice?  y / n");
         char rollYesNo = Character.toLowerCase(scanner.next().charAt(0));
 
         if (rollYesNo == 'n') {
@@ -102,7 +102,7 @@ public class MethodsExercises {
             }
         }
 
-        System.out.println("Roll again? ");
+        System.out.println("Roll again? y / n");
         rollYesNo = Character.toLowerCase(scanner.next().charAt(0));
 
         if (rollYesNo == 'n') {
