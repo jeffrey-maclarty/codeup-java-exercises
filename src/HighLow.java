@@ -10,7 +10,7 @@ public class HighLow {
         byte userGuess = 0;
         byte numberOfGuesses = 0;
 
-        while (userGuess != randomNumber && numberOfGuesses < 20) {
+        while (userGuess != randomNumber && numberOfGuesses < 10) {
             System.out.println("Try to guess the number '1 - 100': ");
             userGuess = scanner.nextByte();
             if (userGuess == randomNumber) {
@@ -22,7 +22,7 @@ public class HighLow {
                 System.out.println("Wrong! " + userGuess + " is too low, try a higher number.");
             }
             numberOfGuesses += 1;
-            System.out.println("That was guess " + numberOfGuesses + " of 20 allowed.");
+            System.out.println("That was guess " + numberOfGuesses + " of 10 allowed.");
         }
 //        System.out.println(randomNumber);
     }
