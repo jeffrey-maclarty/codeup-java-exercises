@@ -1,27 +1,21 @@
 class Person {
-    public String firstName;
-    public String lastName;
 
-    public String sayHello() {
-        return String.format("Hello from %s %s!", firstName, lastName);
+    private String name;
+
+    public String getName() {
+//TODO: return the person's name
     }
 
-    public static void main(String[] args) {
-        Person rick = new Person();
-        rick.firstName = "Rick";
-        rick.lastName = "Sanchez";
-        System.out.println(rick.sayHello());
-        // prints "Hello from Rick Sanchez!"
-
-        Person ada = new Person();
-        ada.firstName = "Ada";
-        ada.lastName = "Lovelace";
-
-        Person grace = new Person();
-        grace.firstName = "Grace";
-        grace.lastName = "Hopper";
-
-        System.out.println(ada.sayHello());   // "Hello from Ada Lovelace!"
-        System.out.println(grace.sayHello()); // "Hello from Grace Hopper!"
+    public void setName(String name) {
+//TODO: change the name field to the passed value
     }
+
+    public void sayHello() {
+//TODO: print a message to the console using the person's name
+    }
+
+    public static void main (String[] args) {
+
+    }
+
 }
